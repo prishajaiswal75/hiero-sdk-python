@@ -118,13 +118,16 @@ module.exports = async ({ github, context }) => {
       issue_number: issueNumber,
       assignees: [username],
     });
-
+    const confirmationMessage =
+    `✅ **@${username}, you’ve been unassigned from this issue.**\n\n` +
+    `Thanks for letting us know! If you’d like to work on something else, ` +
+    `feel free to browse our open issues.`;
     // Add hidden marker to track unassign
     await github.rest.issues.createComment({
       owner,
       repo,
       issue_number: issueNumber,
-      body: marker,
+      body: `${marker}\n\n${confirmationMessage}`,
     });
 
    console.log('[unassign] Unassign completed successfully', {
