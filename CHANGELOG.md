@@ -104,7 +104,7 @@ This changelog is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.
 - Add GitHub Actions script and workflow for automatic spam list updates.
 - Added technical docstrings and hardening (set -euo pipefail) to the pr-check-test-files.sh script (#1336)
 - Added prompt for coderabbit to review `Query` and it's sub-classes.
-- Added a visible confirmation comment when a user un-assigns themselves from an issue (#1506)
+- Added a visible confirmation comment when a user unassigns themselves from an issue (#1506)
 
 ### Changed
 
